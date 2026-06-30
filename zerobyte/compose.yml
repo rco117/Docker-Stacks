@@ -12,7 +12,7 @@ services:
     environment:
       - TZ=Europe/Zurich # Set your timezone here
       - BASE_URL=http://localhost:4096 # URL you will use to access Zerobyte
-      - APP_SECRET=replace-me-with-a-secure-random-secret
+      - APP_SECRET=33e2097484aa9b913a6e03704e300deb7663f6998700e631686cf21b4642ff22
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/lib/zerobyte:/var/lib/zerobyte

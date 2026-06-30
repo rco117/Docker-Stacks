@@ -11,3 +11,7 @@
 *.crt
 .vscode/
 __pycache__/
+
+# Container runtime data (bind mounts)
+ohmypcap/data/
+stirlingpdf/stirling-data/

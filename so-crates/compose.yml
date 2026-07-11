@@ -1,0 +1,11 @@
+services:
+  so-crates:
+    image: ghcr.io/dougburks/so-crates:main
+    container_name: so-crates
+    ports:
+      - "8005:8005"
+    volumes:
+      - type: bind
+        source: ./data
+        target: /data
+    restart: unless-stopped

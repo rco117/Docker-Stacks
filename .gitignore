@@ -14,5 +14,6 @@ __pycache__/
 
 # Container runtime data (bind mounts)
 ohmypcap/data/
+snapotter/data/
 so-crates/data/
 stirlingpdf/stirling-data/

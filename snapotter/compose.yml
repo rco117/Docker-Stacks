@@ -6,7 +6,7 @@ services:
       DATABASE_URL: postgres://snapotter:snapotter@postgres:5432/snapotter
       REDIS_URL: redis://redis:6379
     volumes:
-      - SnapOtter-data:/data
+      - ./data/snapotter-data:/data
     depends_on: [postgres, redis]
     restart: unless-stopped
   postgres:
@@ -16,13 +16,9 @@ services:
       # Change this for any non-local deployment.
       POSTGRES_PASSWORD: snapotter
       POSTGRES_DB: snapotter
-    volumes: ["SnapOtter-pgdata:/var/lib/postgresql/data"]
+    volumes: ["./data/pg-data:/var/lib/postgresql/data"]
     restart: unless-stopped
   redis:
     image: redis:8-alpine
-    volumes: ["SnapOtter-redisdata:/data"]
+    volumes: ["./data/redis-data:/data"]
     restart: unless-stopped
-volumes:
-  SnapOtter-data:
-  SnapOtter-pgdata:
-  SnapOtter-redisdata:
